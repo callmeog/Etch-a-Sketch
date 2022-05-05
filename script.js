@@ -4,17 +4,13 @@ function grid(elem) {
    //creating grid rows
    for(let i = 0; i < 16; i+=1) {  
       let row = document.createElement('div') ;
-      row.className = 'row';
-      row.id = "row" + i;
-      console.log(row)
-      
+      row.className = 'row';    
 
       //creating columns
       for(let x = 0; x < 16; x+=1) {
          let col = document.createElement('div');
          col.className = 'col';
-         row.appendChild(col);
-         
+         row.appendChild(col);  
       }
       container.appendChild(row);
    }
