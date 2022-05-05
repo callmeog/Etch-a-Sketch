@@ -8,14 +8,14 @@ function grid(elem) {
       row.id = "row" + i;
 
       //creating columns
-      for(let x = 0; x < 16; x++) {
-         let col = document.querySelector('div');
+      for(let x = 0; x < 16; x+=1) {
+         let col = document.createElement('div');
          col.className = 'col';
          row.appendChild(col);
       }
       container.appendChild(row);
    }
-   return container;
+   elem.appendChild(container)
 }
-
+grid(document.body);
 
