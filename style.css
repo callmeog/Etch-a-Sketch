@@ -7,3 +7,20 @@ body {
    margin: 0;
    box-sizing: inherit;
 }
+
+#container {
+   margin: 2em;
+}
+
+.row {
+   border: 1px solid black;
+   height: 1em;
+  
+}
+
+.col {
+   border: 1px solid black;
+   display: inline-block;
+   width: 6.25%;
+   height: 1em;
+}
