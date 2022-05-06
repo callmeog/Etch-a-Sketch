@@ -8,28 +8,36 @@ body {
    box-sizing: border-box;
 }
 
+button {
+   padding: 2rem;
+}
+
+.content-container {
+   display: flex;
+}
+
 #container {
-   margin: 2em;
    cursor: pointer;
+   width: 30%;
 }
 
 .row {
    border: 1px solid black;
-   height: 1em;
+   height: 2rem;
 }
 
 .col {
    border: 1px solid black;
    display: inline-block;
    width: 6.25%;
-   height: 1em;
    box-sizing: border-box;
+   height: 2rem;
 }
 
 .divs-bg-color {
-   background: grey;
+   background: ;
 }
 
 .divs-bg-color:hover {
-   background: white;
+   background: ;
 }
