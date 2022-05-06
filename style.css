@@ -10,6 +10,7 @@ body {
 
 #container {
    margin: 2em;
+   cursor: pointer;
 }
 
 .row {
@@ -23,4 +24,12 @@ body {
    width: 6.25%;
    height: 1em;
    box-sizing: border-box;
+}
+
+.divs-bg-color {
+   background: grey;
+}
+
+.divs-bg-color:hover {
+   background: white;
 }
