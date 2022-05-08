@@ -1,5 +1,5 @@
 body {
-   margin: 3rem 0;
+ 
 }
 
 *,*::before, *::after {
@@ -8,27 +8,29 @@ body {
    box-sizing: border-box;
 }
 
-
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 .controls {
-   font-size: 20px;
-   height: 3px;
-   text-align: center;
-   margin-bottom: 3rem;
+   
 }
 
-
-.row {
-   border: 1px solid black;
-   height: 2rem;
-   cursor: pointer;
-   width: 100%;
+#game {
+   display: grid;
+   place-items: center;
 }
 
-.col {
-   border: 1px solid black;
-   display: inline-block;
-   width: 6.25%;
-   box-sizing: border-box;
-   height: 2rem;
+.grid {
+   display: grid;
+   grid-template-columns: repeat(16, auto);
+   grid-template-rows: repeat(16, auto);
+}
+
+.box {
+  border: 1px solid grey; 
+  width: 30px;
+  height: 20px
 }
