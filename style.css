@@ -8,22 +8,24 @@ body {
    box-sizing: border-box;
 }
 
-button {
-   padding: 2rem;
-}
-
-.content-container {
+.main-container {
    display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-#container {
-   cursor: pointer;
-   width: 30%;
+#grid-range {
+   font-size: 20px;
+   height: 3px;
 }
+
+
 
 .row {
    border: 1px solid black;
    height: 2rem;
+   cursor: pointer;
+   width: 100%;
 }
 
 .col {
@@ -34,10 +36,6 @@ button {
    height: 2rem;
 }
 
-.divs-bg-color {
-   background: ;
-}
-
-.divs-bg-color:hover {
-   background: ;
+.col:hover {
+   background: red;
 }
