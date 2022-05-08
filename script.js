@@ -1,3 +1,4 @@
+"use strict";
 function grid(elem) {
    const container = document.querySelector('#container');
 
