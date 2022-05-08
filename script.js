@@ -8,7 +8,14 @@ function drawGrid(container, row, col) {
    return(box);
 }
 
+function createBox() {
+   const grid = document.createElement('div');
+   grid.className = 'grid';
 
+   for(let i = 0; i < 16; i ++) {
+      
+   }
+}
 
 
 
