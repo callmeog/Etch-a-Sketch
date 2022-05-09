@@ -29,7 +29,12 @@ startUp();
 
 
 const range = document.querySelector('#grid-size');
-const outputRange = document.querySelector('#output')
+const output = document.querySelector('#output');
+output.innerHTML = range.value;
+
+range.oninput = function() {
+   output.innerHTML = this.value;
+}
 
 
 /*
