@@ -28,11 +28,7 @@ startUp();
 
 
 
-function gridRange(val) {
-   value = 0;
-   document.getElementById('output').value=val;
-}
-gridRange()
+
 
 
 /*
