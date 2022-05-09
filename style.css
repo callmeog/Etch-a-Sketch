@@ -12,10 +12,13 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   margin: 3rem;
+   gap: 5em;
 }
 
 .controls {
-   
+   display: grid;
+   gap: 1rem;
 }
 
 #game {
@@ -27,10 +30,11 @@ body {
    display: grid;
    grid-template-columns: repeat(16, auto);
    grid-template-rows: repeat(16, auto);
+   cursor: pointer;
 }
 
 .box {
   border: 1px solid grey; 
-  width: 30px;
-  height: 20px
+  width: 40px;
+  height: 30px
 }
