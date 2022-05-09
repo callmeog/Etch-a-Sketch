@@ -28,10 +28,16 @@ startUp();
 
 
 
+function gridRange(val) {
+   value = 0;
+   document.getElementById('output').value=val;
+}
+gridRange()
 
 
-
+/*
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', (element) => {
    
 });
+*/
