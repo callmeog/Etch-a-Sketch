@@ -22,17 +22,16 @@ function createBox(container) {
 
 function startUp() {
    const game = document.getElementById('game');
-   createBox(game)
-
+   createBox(game);
 }
-startUp()
+startUp();
 
 
 
 
 
 
-const gridButton = document.querySelector('#grid-range');
-gridButton.addEventListener('click', (element) => {
-   element = prompt('enter grid size')
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', (element) => {
+   
 });
