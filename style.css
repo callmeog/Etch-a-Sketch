@@ -8,6 +8,11 @@ body {
    box-sizing: border-box;
 }
 
+.grid-container {
+   text-align: center;
+   padding: 1rem;
+}
+
 .main {
    display: flex;
    justify-content: center;
