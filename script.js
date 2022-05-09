@@ -28,7 +28,7 @@ startUp();
 
 
 
-
+const range = document.querySelector('#grid-size');
 
 
 /*
