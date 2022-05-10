@@ -27,14 +27,20 @@ function startUp() {
 startUp();
 
 
+const colorPallet = function() {
+   const color = document.querySelector('color-pallet');
+}
 
 const range = document.querySelector('#grid-size');
 const output = document.querySelector('#output');
 output.innerHTML = range.value;
 
+//Update slider value when it's increased
 range.oninput = function() {
    output.innerHTML = this.value;
 }
+
+
 
 
 /*
