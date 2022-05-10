@@ -27,7 +27,7 @@ h1 {
    justify-content: center;
    align-items: center;
    margin: 3rem;
-   gap: 5em;
+   gap: 5rem;
 }
 
 .controls {
@@ -39,6 +39,14 @@ h1 {
 .buttons-container {
    display: grid;
    gap: 2em;
+}
+
+button {
+   padding: 1em 5em;
+}
+
+.grid-range {
+   width: 120px
 }
 
 .color-pallet {
@@ -64,5 +72,4 @@ h1 {
   width: 40px;
   height: 30px;
   border: 1px solid var(--grid-lines);
-  margin: .1px;
 }
