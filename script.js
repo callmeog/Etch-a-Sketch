@@ -1,5 +1,5 @@
-
 const color = document.querySelector('.color-pallet');
+const clear = document.querySelector('#clear');
 function drawGrid(container, row, col) {
    const box = document.createElement('div');
    box.className = 'box';
@@ -8,11 +8,17 @@ function drawGrid(container, row, col) {
    //change background color when mouse hovers
    box.addEventListener('mouseenter', () => {
          box.style.backgroundColor = color.value;
-      })
+      });
+      
+      //clear grid background color
+      clear.addEventListener('click', () => {
+         box.style.backgroundColor = 'white';
+      });
 
    container.appendChild(box);
    return(box);
 }
+
 
 function createBox(container) {
    const grid = document.createElement('div');
@@ -45,10 +51,3 @@ range.oninput = function() {
 }
 
 
-
-/*
-const clear = document.querySelector('#clear');
-clear.addEventListener('click', (element) => {
-   
-});
-*/
