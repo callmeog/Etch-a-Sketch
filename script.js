@@ -1,5 +1,6 @@
 const color = document.querySelector('.color-pallet');
 const clear = document.querySelector('#clear');
+const erase = document.querySelector('#erase');
 function drawGrid(container, row, col) {
    const box = document.createElement('div');
    box.className = 'box';
@@ -12,6 +13,11 @@ function drawGrid(container, row, col) {
       
       //clear grid background color
       clear.addEventListener('click', () => {
+         box.style.backgroundColor = 'white';
+      });
+
+      //onclick erase grid background color
+      box.addEventListener('click', () => {
          box.style.backgroundColor = 'white';
       });
 
