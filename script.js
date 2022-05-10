@@ -16,11 +16,6 @@ function drawGrid(container, row, col) {
          box.style.backgroundColor = 'white';
       });
 
-      //onclick erase grid background color
-      box.addEventListener('click', () => {
-         box.style.backgroundColor = 'white';
-      });
-
    container.appendChild(box);
    return(box);
 }
