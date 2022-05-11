@@ -1,30 +1,20 @@
 const color = document.querySelector('.color-pallet');
 const clear = document.querySelector('#clear');
-const erase = document.querySelector('#erase');
+
+
 function drawGrid(container, row, col) {
+
    const box = document.createElement('div');
    box.className = 'box';
    box.id = `box${row}${col}`;
-   
-   //change background color when mouse hovers
-   box.addEventListener('mouseenter', () => {
-         box.style.backgroundColor = color.value;
-      });
-      
-      //clear grid background color
-      clear.addEventListener('click', () => {
-         box.style.backgroundColor = 'white';
-      });
 
    container.appendChild(box);
    return(box);
 }
 
-
 function createBox(container) {
    const grid = document.createElement('div');
    grid.className = 'grid';
-
 
    for(let i = 0; i < 16; i++) {
       for(let j = 0; j < 16; j++) {
@@ -39,6 +29,13 @@ function startUp() {
    createBox(game);
 }
 startUp();
+
+
+
+
+
+
+
 
 
 
