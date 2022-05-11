@@ -40,6 +40,20 @@ colorPicker.addEventListener("change", () => {
    randomColor = false;
 });
 
+const boxes = document.querySelectorAll(".box");
+for(let box of boxes) {
+   box.addEventListener("mouseeneter", (e) => {
+      let color = colorPicker.value;
+
+      if(randomColor) {
+         let r = Math.floor(Math.random() * 256);
+         let g = Math.floor(Math.random() * 256);
+         let b = Math.floor(Math.random() * 256);
+         color = getColorString(r, g, b);
+      }
+      e.target.style.backgroundColor = color;
+   })
+}
 
 
 
