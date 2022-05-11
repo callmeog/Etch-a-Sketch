@@ -35,6 +35,10 @@ rgb.addEventListener("click", () => {
    randomColor = true;
 });
 
+const colorPicker = document.querySelector("#color-picker");
+colorPicker.addEventListener("change", () => {
+   randomColor = false;
+});
 
 
 
