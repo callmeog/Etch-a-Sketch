@@ -30,10 +30,10 @@ function startUp() {
 }
 startUp();
 
-
-
-
-
+const rgb = document.querySelector('#rgb');
+rgb.addEventListener("click", () => {
+   randomColor = true;
+});
 
 
 
