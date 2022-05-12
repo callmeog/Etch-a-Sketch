@@ -39,17 +39,17 @@ h1 {
 
 .buttons-container {
    display: grid;
-   gap: 2em;
+   gap: 2rem;
 }
 
 button {
-   padding: 1em 5em;
+   padding: 1em 4em;
    cursor: pointer;
 }
 
 
 .grid-range {
-   width: 120px
+   width: 160px
 }
 
 .color-picker {
