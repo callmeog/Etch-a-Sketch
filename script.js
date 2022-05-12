@@ -1,12 +1,14 @@
-const color = document.querySelector('.color-pallet');
-const clear = document.querySelector('#clear');
-
+let randomColor = false;
 
 function drawGrid(container, row, col) {
-
    const box = document.createElement('div');
    box.className = 'box';
    box.id = `box${row}${col}`;
+
+   const clear = document.querySelector('#clear');
+      clear.addEventListener('click', () => {
+      box.style.backgroundColor = 'white';
+   });
 
    container.appendChild(box);
    return(box);
@@ -30,19 +32,20 @@ function startUp() {
 }
 startUp();
 
-const rgb = document.querySelector('#rgb');
-rgb.addEventListener("click", () => {
+document.querySelector('#rgb').addEventListener("click", () => {
    randomColor = true;
 });
 
-const colorPicker = document.querySelector("#color-picker");
+const colorPicker = document.querySelector(".color-picker");
 colorPicker.addEventListener("change", () => {
    randomColor = false;
 });
 
+
+
 const boxes = document.querySelectorAll(".box");
 for(let box of boxes) {
-   box.addEventListener("mouseeneter", (e) => {
+   box.addEventListener("mouseenter", (e) => {
       let color = colorPicker.value;
 
       if(randomColor) {
@@ -52,10 +55,12 @@ for(let box of boxes) {
          color = getColorString(r, g, b);
       }
       e.target.style.backgroundColor = color;
-   })
-}
+   });
+};
 
-
+const getColorString = (r, g, b) => {
+   return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+};
 
 const range = document.querySelector('#grid-size');
 const output = document.querySelector('#output');
