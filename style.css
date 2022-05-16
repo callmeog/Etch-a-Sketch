@@ -9,12 +9,14 @@ body {
 
 :root {
    --default: white;
-   --grid-lines: lightgrey;
+   --grid-lines: rgb(201, 201, 201);
+   --controls: grey;
 }
 
 
 h1 {
    margin-bottom: 1em;
+   color: #ffed66
 }
 
 .main {
@@ -30,7 +32,7 @@ h1 {
    gap: 2rem;
    padding: 2rem;
    background: orangered;
-   border-radius: 5px;
+   background: var(--controls);
 }
 
 .buttons-container {
@@ -43,6 +45,8 @@ button {
    cursor: pointer;
    border: none;
    border-radius: 5px;
+   background: #fff;
+   color: #000;
 }
 
 
@@ -58,9 +62,9 @@ button {
 
 .grid-container {
    text-align: center;
-   padding: 2rem;
-   border-radius: 5px;
-   background: blue;
+   padding: 3rem;
+   border-radius: 10px;
+   background: #ff5e5b;
 }
 
 #game {
@@ -73,12 +77,12 @@ button {
    grid-template-columns: repeat(16, auto);
    grid-template-rows: repeat(16, auto);
    cursor: pointer;
-   background: rgb(255, 255, 255);
+   background-color: #fff;
 }
 
 .box {
-  border: 1px solid grey; 
+  border: .1px solid var(--grid-lines); 
   width: 40px;
   height: 30px;
-  border: 1px solid var(--grid-lines);
+  margin: 0;
 }
