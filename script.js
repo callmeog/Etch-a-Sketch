@@ -1,12 +1,16 @@
 let randomColor = false;
 
+const erase = document.querySelector('#erase');
+const slider = document.querySelector('#slider');
+const output = document.querySelector('#output');
+const gridSIze = document.querySelector('#grid-size');
+
 function drawGrid(container, row, col) {
    const box = document.createElement('div');
    box.className = 'box';
    box.id = `box${row}${col}`;
-
-   const clear = document.querySelector('#clear');
-      clear.addEventListener('click', () => {
+   
+   erase.addEventListener('click', () => {
       box.style.backgroundColor = 'white';
    });
 
@@ -34,14 +38,13 @@ startUp();
 
 document.querySelector('#rgb').addEventListener("click", () => {
    randomColor = true;
+   
 });
 
 const colorPicker = document.querySelector(".color-picker");
 colorPicker.addEventListener("change", () => {
    randomColor = false;
 });
-
-
 
 const boxes = document.querySelectorAll(".box");
 for(let box of boxes) {
@@ -62,13 +65,24 @@ const getColorString = (r, g, b) => {
    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 };
 
-const range = document.querySelector('#grid-size');
-const output = document.querySelector('#output');
-output.innerHTML = range.value;
-
-//Update slider value when it's increased
-range.oninput = function() {
-   output.innerHTML = this.value;
-}
 
 
+//Mousedown and mouseup background color effect
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+   button.addEventListener("mousedown", () => {
+      button.style.cssText = "background: #000; color: #fff";
+      function controlBtn() {
+         switch(event.type) {
+            case "mousedown":
+               button.style.cssText = "background: #000; color: #fff";
+            break;
+      
+            case "mouseup":
+               button.style.cssText = "background: #fff; color: #000";
+         }
+      }
+      button.addEventListener("mousedown", controlBtn);
+      button.addEventListener("mouseup", controlBtn);
+   });
+});
