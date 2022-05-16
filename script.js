@@ -1,8 +1,6 @@
 let randomColor = false;
 
 const erase = document.querySelector('#erase');
-const slider = document.querySelector('#slider');
-const output = document.querySelector('#output');
 const gridSIze = document.querySelector('#grid-size');
 
 function drawGrid(container, row, col) {
