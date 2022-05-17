@@ -63,7 +63,10 @@ const getColorString = (r, g, b) => {
    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 };
 
-
+function gridPixel() {
+   gridSIze = prompt("Enter from 1 to 64, to change grid template size", 16);
+   
+}
 
 //Mousedown and mouseup background color effect
 const buttons = document.querySelectorAll("button");
@@ -84,3 +87,5 @@ buttons.forEach((button) => {
       button.addEventListener("mouseup", controlBtn);
    });
 });
+
+gridSIze.onclick = gridPixel;
