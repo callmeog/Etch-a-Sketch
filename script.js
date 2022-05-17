@@ -9,7 +9,7 @@ function drawGrid(container, row, col) {
    box.id = `box${row}${col}`;
    
    erase.addEventListener('click', () => {
-      box.style.cssText = 'background: white; transition: 0.3s all';
+      box.style.cssText = 'background: grey; transition: 0.3s all';
    });
 
    container.appendChild(box);
