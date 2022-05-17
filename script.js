@@ -9,7 +9,7 @@ function drawGrid(container, row, col) {
    box.id = `box${row}${col}`;
    
    erase.addEventListener('click', () => {
-      box.style.backgroundColor = 'white';
+      box.style.cssText = 'background: white; transition: 0.3s all';
    });
 
    container.appendChild(box);
@@ -63,11 +63,6 @@ const getColorString = (r, g, b) => {
    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 };
 
-function gridPixel() {
-   gridSIze = prompt("Enter from 1 to 64, to change grid template size", 16);
-   
-}
-
 //Mousedown and mouseup background color effect
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
@@ -76,7 +71,7 @@ buttons.forEach((button) => {
       function controlBtn() {
          switch(event.type) {
             case "mousedown":
-               button.style.cssText = "background: #000; color: #fff";
+               button.style.cssText = "background: #000; color: #fff; box-shadow: none;";
             break;
       
             case "mouseup":
@@ -87,5 +82,3 @@ buttons.forEach((button) => {
       button.addEventListener("mouseup", controlBtn);
    });
 });
-
-gridSIze.onclick = gridPixel;
