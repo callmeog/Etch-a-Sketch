@@ -23,7 +23,7 @@ h1 {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 9rem;
+   margin: 8rem 0;
    gap: 6rem;
 }
 
