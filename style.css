@@ -16,7 +16,8 @@ body {
 
 h1 {
    margin-bottom: 1em;
-   color: #ffed66
+   color: #ffed66;
+   text-shadow: 1px 1px 1px #000;
 }
 
 .main {
@@ -95,3 +96,7 @@ footer span a {
    font-size: inherit;
 }
 
+a:hover {
+   text-decoration: none;
+   color: #F00;
+}
