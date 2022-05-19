@@ -88,3 +88,8 @@ button {
 .footer {
    text-align: center;
 }
+
+footer span a {
+   margin: 0 7px;
+}
+
