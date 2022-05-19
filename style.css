@@ -87,9 +87,11 @@ button {
 
 .footer {
    text-align: center;
+   font-size: 13px;
 }
 
 footer span a {
    margin: 0 7px;
+   font-size: inherit;
 }
 
