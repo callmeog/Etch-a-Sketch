@@ -1,3 +1,5 @@
+"use strict"
+
 let randomColor = false;
 
 const erase = document.querySelector('#erase');
@@ -8,8 +10,9 @@ function drawGrid(container, row, col) {
    box.className = 'box';
    box.id = `box${row}${col}`;
    
+   //clear button
    erase.addEventListener('click', () => {
-      box.style.cssText = 'background: grey; transition: 0.3s all';
+      box.style.cssText = 'background: lightgrey; transition: 0.3s all';
    });
 
    container.appendChild(box);
@@ -63,7 +66,7 @@ const getColorString = (r, g, b) => {
    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 };
 
-//Mousedown and mouseup background color effect
+//Mousedown and mouseup background color effect for buttons
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
    button.addEventListener("mousedown", () => {
@@ -82,3 +85,13 @@ buttons.forEach((button) => {
       button.addEventListener("mouseup", controlBtn);
    });
 });
+
+//Grid size button
+function gridPixel() {
+   gridSIze = prompt("Enter from 1 to 64, to change grid template size", 16);
+   if(gridSIze >= 1 && gridSIze <= 100) {
+      createBox(gridSIze, gridSIze)
+   }
+   
+}
+gridSIze.onclick = gridPixel;
