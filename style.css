@@ -30,10 +30,11 @@ h1 {
 
 .controls {
    display: grid;
-   gap: 2rem;
+   gap: 1rem;
    padding: 1rem;
    border: solid #000;
    border-width: 1px  3px 3px 1px;
+   border-radius: 5px;
 }
 
 .buttons-container {
@@ -53,10 +54,10 @@ button {
    box-shadow: 2px 2px 5px grey;
 }
 
-.color-picker {
-   width: 100%;
-   height: 50px;
+input {
    border: none;
+   width: 170px;
+   height: 40px;
 }
 
 .grid-container {
@@ -94,6 +95,10 @@ button {
 footer span a {
    margin: 0 7px;
    font-size: inherit;
+}
+
+a {
+   color: blue;
 }
 
 a:hover {
