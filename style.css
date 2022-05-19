@@ -85,6 +85,6 @@ button {
   background: lightgrey;
 }
 
-.pad {
-   justify-content: space-between;
+.footer {
+   text-align: center;
 }
